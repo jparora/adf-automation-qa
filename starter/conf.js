@@ -1,10 +1,13 @@
 // conf.js
 
 require("babel-register")({
-  presets: [ 'es2015' ]
+ // presets: [ 'es2015' ]
 });
 
 exports.config = {
+
+    directConnect: true,
+
   specs: ['spec.js'],
   framework: 'jasmine',
 
@@ -38,11 +41,12 @@ exports.config = {
       }
   },
 
-  jasmineNodeOpts: {
-      showColors: true,
-      displaySpecDuration: true,
-      // overrides jasmine's print method to report dot syntax for custom reports
-      print: () => {},
-      defaultTimeoutInterval: 50000
-  }
-};
+     asmineNodeOpts: {
+     showColors: true,
+     displaySpecDuration: true,
+    // overrides jasmine's print method to report dot syntax for custom reports
+    print: () => {},
+    defaultTimeoutInterval: 50000
+     }
+     
+  };
