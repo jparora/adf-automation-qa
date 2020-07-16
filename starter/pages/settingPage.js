@@ -2,12 +2,11 @@ class SettingPage{
 
 //Page Locators
 
-get ProviderDropDown(){return element(by.css('#adf-provider-selector > div > div.mat-select-arrow-wrapper.ng-tns-c134-1 > div'))};
+get ProviderDropDown(){return element(by.css('#host-form > mat-form-field > div > div.mat-form-field-flex.ng-tns-c126-0'))};
 
-get SelectProvider(){return element(by.css('#mat-option-1 > span'))}
+get SelectProvider(){return element(by.id('mat-option-1'))};
 
 get ClickApply() {return element(by.css('#host-button > span'))};
-
 
 //Page Actions
 
@@ -16,7 +15,7 @@ getProviderDropDown(){
 };
 
 getSelectProvider(){
-    this.SelectionProvider.click();
+    this.SelectProvider.click();
 };
 
 getClickApply(){

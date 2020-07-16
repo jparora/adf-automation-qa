@@ -3,20 +3,21 @@ class HomePage{
 
     //Page Locator
 
-    get HomePageIcon(){return element(by.css('<mat-icon role="img" matlisticon="" class="mat-icon notranslate mat-list-icon material-icons mat-icon-no-color" aria-hidden="true">home</mat-icon>'))}
+    get Accountname(){return element(by.id('adf-userinfo-ecm-name-display'))}
 
-    get File(){return element(by.css('body > app-root > div > ng-component > adf-sidenav-layout > div > adf-layout-container > mat-sidenav-container > mat-sidenav > div > mat-nav-list > mat-list-item:nth-child(3) > div > div.mat-list-text > span'))}
+    get FilePage(){return element(by.xpath('/html/body/app-root/div/ng-component/adf-sidenav-layout/div/adf-layout-container/mat-sidenav-container/mat-sidenav/div/mat-nav-list/mat-list-item[3]/div/div[2]/span'))}
     
     
 
     //Page Actions
 
-    getHomePageIconPresent(){
-        this.HomePageIcon().isPresent();
+    getAcctName(){
+      return this.Accountname.getText();
     }
 
     getFilePage(){
-        this.File.click();
+        this.FilePage.click();
+        return browser.getCurrentUrl();
     }
 }
 

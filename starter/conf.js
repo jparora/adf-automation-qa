@@ -46,7 +46,7 @@ exports.config = {
      displaySpecDuration: true,
     // overrides jasmine's print method to report dot syntax for custom reports
     print: () => {},
-    defaultTimeoutInterval: 50000
+    defaultTimeoutInterval: 1000000
      }
      
   };
